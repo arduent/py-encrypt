@@ -14,7 +14,7 @@ Commands:
 
 This command generates a new private and public keypair. It will prompt for the password, which can be nothing (press enter).
 
-Note: A blake2 hash is calculated for the password. The first 32 characters (base64 chars) are used to encrypt the private key. This strategy ensures that any password will suffice, even a blank password, and the private key is always encrypted. However, concatenating the hash increases the possibility of collisions. (But the encryption key complexity remains 32 base64 characters, regardless). 
+Note: A blake2 hash is calculated for the password. The first 32 characters (base64 chars) are used to encrypt the private key. This strategy ensures that any password will suffice, even a blank password, and the private key is always encrypted. However, truncating the hash increases the possibility of collisions. (But the encryption key complexity remains 32 base64 characters, regardless). 
 
 example: 
 
